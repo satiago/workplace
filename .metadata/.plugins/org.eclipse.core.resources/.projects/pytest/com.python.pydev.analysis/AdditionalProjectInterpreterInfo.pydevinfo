@@ -1,0 +1,19 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/satiago/git/repos/workplace/.metadata/.plugins/org.eclipse.core.resources/.projects/pytest/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+src.test|0|/home/satiago/git/repos/workplace/pytest/src/test.py
+src.test2|0|/home/satiago/git/repos/workplace/pytest/src/test2.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=src.test
+2=src.test2
+-- END DICTIONARY
+-- START TREE 1
+1
+tes|2|test!10@test2!18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

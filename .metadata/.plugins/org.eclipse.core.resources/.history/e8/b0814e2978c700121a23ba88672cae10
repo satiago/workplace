@@ -1,7 +1,0 @@
-print("hello world!!")
-
-def test():
-    count = 0
-    if count <= 10:
-        print("hello world" + str(count) + "\n")
-        count = count + 1

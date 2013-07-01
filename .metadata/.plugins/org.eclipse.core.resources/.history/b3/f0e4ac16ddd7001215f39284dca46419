@@ -1,0 +1,12 @@
+'''
+Created on Jun 17, 2013
+
+@author: satiago
+'''
+
+if __name__ == '__main__':
+    print("main function")
+    
+    if not True and 0 < 1:
+        print("enter")
+    

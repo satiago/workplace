@@ -1,0 +1,17 @@
+INSTUPrules
+/home/satiago/git/repos/workplace/BP_project1/src/rules.py
+INFOS:&&1|1|2|0&&2|3|2|1&&1|4|2|0&&3|5|2|4&&2|6|2|4&&1|7|2|0&&3|5|2|7&&3|8|2|7&&2|6|2|7&&3|8|2|9&&1|10|2|0&&3|5|2|10&&2|6|2|10&&2|3|2|10&&1|11|2|0&&3|5|2|11&&3|12|2|11&&2|6|2|11&&2|3|2|11&&3|12|2|13&&3|12|2|13&&1|14|2|0&&3|5|2|14
+TitleRule=7
+HeadingRule=4
+condition=6
+Rule=1
+type=5
+ListRule.action=13
+ListRule=11
+rules=2
+ParagraphRule=14
+inside=12
+action=3
+ListItemRule=10
+TitleRule.condition=9
+first=8

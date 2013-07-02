@@ -2,13 +2,47 @@
 -- START DISKCACHE
 /home/satiago/git/repos/workplace/.metadata/.plugins/org.eclipse.core.resources/.projects/BP_project1/com.python.pydev.analysis/v1_indexcache
 .v1_indexcache
+util|0|/home/satiago/git/repos/workplace/BP_project1/src/util.py
+handlers|0|/home/satiago/git/repos/workplace/BP_project1/src/handlers.py
+main|0|/home/satiago/git/repos/workplace/BP_project1/src/main.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+5
+5=HTMLRenderer
+4=Handler
+1=util
+3=main
+2=handlers
 -- END DICTIONARY
 -- START TREE 1
-0
+13
+!<m|0|
+H|0|
+Ti|0|
+blo|1|blocks!10@
+han|1|Handler!17@
+hea|0|
+htm|1|HTMLRenderer!17@
+lin|1|lines!10@
+lis|0|
+mai|1|main!26@
+par|0|
+rul|0|
+tit|0|
 -- END TREE
 -- START TREE 2
-0
+13
+!<m|0|
+_pa|0|
+act|0|
+cal|1|callback!4&18@
+co|0|
+con|0|
+end|7|end_listitem!5&18@end_document!5&18@end_heading!5&18@end_paragraph!5&18@end!4&18@end_title!5&18@end_list!5&18@
+fee|1|feed!5&18@
+fir|0|
+ins|0|
+sta|7|start_heading!5&18@start_title!5&18@start_document!5&18@start_paragraph!5&18@start!4&18@start_listitem!5&18@start_list!5&18@
+sub|4|sub!4&18@sub_emphasis!5&18@sub_url!5&18@sub_mail!5&18@
+typ|0|
 -- END TREE

@@ -1,0 +1,14 @@
+import sys
+import re
+import util
+
+def main():
+    outfile = open(""text_out.txt"")
+    write('<html><head><tile>...</title></head><body>',None,None,open("text_out.txt", ).write())
+#     file = open("text_input.txt")
+    
+    
+
+if __name__ == "__main__":
+    main()
+    

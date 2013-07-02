@@ -1,0 +1,12 @@
+import sys
+import re
+import util
+
+def main():
+    fo = open("text_input.txt")
+    
+    
+
+if __name__ = "__main__":
+    main()
+    

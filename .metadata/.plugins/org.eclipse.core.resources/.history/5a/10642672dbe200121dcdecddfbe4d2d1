@@ -1,0 +1,15 @@
+import sys
+import re
+import util
+
+def main():
+    outfile = open("text_out.txt", 'w')
+    outfile.write('<html><head><tile>...</title></head><body>')
+    
+    infile = open("text_input.txt")
+    
+    
+
+if __name__ == "__main__":
+    main()
+    

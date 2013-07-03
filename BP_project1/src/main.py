@@ -9,28 +9,32 @@ import rules
 def main():
 #     +符号保证文件不存在时可以创建
     outfile = open("text_out.html", 'w+')
-    outfile.write('<html><head><title>...</title></head><body>')
+#     outfile.write('<html><head><title>...</title></head><body>')
     
     infile = open("text_input.txt", "r")
     
-    title = True
+    handler = handlers.HTMLRenderer()
+    parser = util.BasicTextParser(handler)
     
-    for block in util.blocks(infile):
-#     for block in blocks(infile):
-# \1为组号，匹配字符串中的第一组字符串
-        block = re.sub(r"\*(.+?)\*", r"<em>\1</em>", block)
-        if title:
-            outfile.write("<h1>")
-            outfile.write(block)
-            outfile.write("</h1>")
-            title = False
-            
-        else:
-            outfile.write("<p>")
-            outfile.write(block)
-            outfile.write("</p>")
-            
-    outfile.write("</body></html>")
+    parser.parse(infile, outfile)
+#     title = True
+#     
+#     for block in util.blocks(infile):
+# #     for block in blocks(infile):
+# # \1为组号，匹配字符串中的第一组字符串
+#         block = re.sub(r"\*(.+?)\*", r"<em>\1</em>", block)
+#         if title:
+#             outfile.write("<h1>")
+#             outfile.write(block)
+#             outfile.write("</h1>")
+#             title = False
+#             
+#         else:
+#             outfile.write("<p>")
+#             outfile.write(block)
+#             outfile.write("</p>")
+#             
+#     outfile.write("</body></html>")
             
     outfile.close()
     infile.close()

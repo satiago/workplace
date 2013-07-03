@@ -7,18 +7,19 @@ handlers|0|/home/satiago/git/repos/workplace/BP_project1/src/handlers.py
 main|0|/home/satiago/git/repos/workplace/BP_project1/src/main.py
 -- END DISKCACHE
 -- START DICTIONARY
-5
-5=HTMLRenderer
-4=Handler
+8
+5=Parser
+4=BasicTextParser
+8=Parser.__init__
+7=HTMLRenderer
+6=Handler
 1=util
 3=main
 2=handlers
 -- END DICTIONARY
 -- START TREE 1
-13
-!<m|0|
-H|0|
-Ti|0|
+11
+bas|1|BasicTextParser!9@
 blo|1|blocks!10@
 han|1|Handler!17@
 hea|0|
@@ -26,23 +27,26 @@ htm|1|HTMLRenderer!17@
 lin|1|lines!10@
 lis|0|
 mai|1|main!26@
-par|0|
+par|1|Parser!9@
 rul|0|
 tit|0|
 -- END TREE
 -- START TREE 2
-13
-!<m|0|
-_pa|0|
+16
+__i|2|__init__!4&10@__init__!5&10@
 act|0|
-cal|1|callback!4&18@
-co|0|
+add|2|addRule!5&10@addFilter!5&10@
+cal|1|callback!6&18@
 con|0|
-end|7|end_listitem!5&18@end_document!5&18@end_heading!5&18@end_paragraph!5&18@end!4&18@end_title!5&18@end_list!5&18@
-fee|1|feed!5&18@
+end|7|end_listitem!7&18@end_document!7&18@end_heading!7&18@end_paragraph!7&18@end!6&18@end_title!7&18@end_list!7&18@
+fee|1|feed!7&18@
+fil|1|filters!8&11@
 fir|0|
+han|1|handler!8&11@
 ins|0|
-sta|7|start_heading!5&18@start_title!5&18@start_document!5&18@start_paragraph!5&18@start!4&18@start_listitem!5&18@start_list!5&18@
-sub|4|sub!4&18@sub_emphasis!5&18@sub_url!5&18@sub_mail!5&18@
+par|1|parse!5&10@
+rul|1|rules!8&11@
+sta|7|start_heading!7&18@start_title!7&18@start_document!7&18@start_paragraph!7&18@start!6&18@start_listitem!7&18@start_list!7&18@
+sub|4|sub!6&18@sub_emphasis!7&18@sub_url!7&18@sub_mail!7&18@
 typ|0|
 -- END TREE

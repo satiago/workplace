@@ -1,9 +1,9 @@
 class Rule:
 
-    def action(self, block, handler):
-        handler.start(self.type)
-        handler.feed(block)
-        handler.end(self.type)
+    def action(self, block, handler, file):
+        handler.start(self.type, file)
+        handler.feed(block, file)
+        handler.end(self.type, file)
         return True
     
 class HeadingRule(Rule):
@@ -32,10 +32,10 @@ class ListItemRule(Rule):
     def condition(self, block):
         return block[0] == "-"
     
-    def action(self, block, handler):
-        handler.start(self.type)
-        handler.feed(block[1:].strip())
-        handler.end(self.type)
+    def action(self, block, handler, file):
+        handler.start(self.type, file)
+        handler.feed(block[1:].strip(), file)
+        handler.end(self.type, file)
         return True   
     
 class ListRule(ListItemRule):
@@ -47,13 +47,13 @@ class ListRule(ListItemRule):
     def condition(self, block):
         return True
     
-    def action(self, block, handler):
+    def action(self, block, handler, file):
         if not self.inside and ListItemRule.condition(self, block):
-            handler.start(self.type)
+            handler.start(self.type, file)
             self.inside = True
             
         elif self.inside and not ListItemRule.condition(self, block):
-            handler.end(self.type)
+            handler.end(self.type, file)
             self.inside = False
             
         return False

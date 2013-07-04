@@ -1,0 +1,27 @@
+from reportlab.lib import colors
+from reportlab.graphics.shapes import *
+from reportlab.graphics import renderPDF
+
+data = [
+        (2012,12,61.2,62.2,60.2),
+        (2013,01,63.2,65.2,61.2),
+        (2013,02,65.3,68.3,62.3),
+        (2013,03,67.5,72.5,62.5),
+        (2013,04,70.1,75.1,65.1),
+        (2013,05,72.7,78.7,66.7),
+        (2013,06,75.7,82.7,68.7),
+        2013 07        78.6    85.6    71.6
+        2013 08        81.6    89.6    73.6
+        2013 09        84.7    93.7    75.7
+        ]
+def test1_main():
+    d = Drawing(100, 100)
+    s = String(50, 50, 'BP_project2', textAnchor = 'middle')
+    
+    d.add(s)
+    
+    renderPDF.drawToFile(d, 'test_out.pdf', 'a simple PDF file')
+
+
+if __name__ == '__main__':
+    main()

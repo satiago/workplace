@@ -1,0 +1,9 @@
+from reportlab.graphics.shapes import Drawing, String
+from reportlab.graphics import renderPDF
+
+d = Drawing(100, 100)
+s = String(50, 50, 'BP_project2', textAnchor = 'middle')
+
+d.add(s)
+
+renderPDF.drawToFile(d, 'test_out.pdf', 'a simple PDF file')

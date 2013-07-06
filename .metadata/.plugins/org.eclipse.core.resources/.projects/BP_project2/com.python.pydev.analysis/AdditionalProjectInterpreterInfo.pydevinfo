@@ -2,19 +2,16 @@
 -- START DISKCACHE
 /home/satiago/git/repos/workplace/.metadata/.plugins/org.eclipse.core.resources/.projects/BP_project2/com.python.pydev.analysis/v1_indexcache
 .v1_indexcache
+main|0|/home/satiago/git/repos/workplace/BP_project2/src/main.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+1
+1=main
 -- END DICTIONARY
 -- START TREE 1
-7
-!<m|0|
-d|0|
-dat|0|
-def|0|
-mai|0|
-s|0|
-tes|0|
+2
+mai|1|main!10@
+tes|2|test1_main!10@test2_main!10@
 -- END TREE
 -- START TREE 2
 0

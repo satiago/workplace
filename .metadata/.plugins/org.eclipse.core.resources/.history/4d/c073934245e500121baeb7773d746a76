@@ -1,0 +1,20 @@
+from xml.sax import parse
+from xml.sax.handler import ContentHandler
+
+class TestHandler(ContentHandler):
+    
+    def startElement(self, name, attrs):
+        print(name, attrs.keys())
+        
+class HeadlineHandler(ContentHandler):
+    
+    in_headline = False
+    
+    def __init__(self, headlines):
+    
+        
+def main():
+    parse('website.xml', TestHandler())
+        
+if __name__ == "__main__":
+    main()

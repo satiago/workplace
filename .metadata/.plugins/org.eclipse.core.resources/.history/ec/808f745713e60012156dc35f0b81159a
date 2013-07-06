@@ -1,0 +1,23 @@
+from xml.sax import parse
+from xml.sax.handler import ContentHandler
+import os
+
+class Dispatcher:
+    
+    def startElement(self, name, attrs):
+        self.dispatch('start', name, attrs)
+    
+    def endElement(self, name):
+        self.dispatch('end', name)
+
+    def dispatch(self, prefix, name, attrs = None):
+        mname = prefix + name.captalize()
+        dname = 'default' + prefix.captalize()
+        method = getattr(self, mname, None)
+        
+        if callable(method):
+           args = ()
+        else:
+            method = getattr(self, dname, None)
+             
+        

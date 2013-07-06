@@ -1,0 +1,50 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/satiago/git/repos/workplace/.metadata/.plugins/org.eclipse.core.resources/.projects/BP_project3/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+main|0|/home/satiago/git/repos/workplace/BP_project3/src/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+6=HeadlineHandler.startElement
+9=TestHandler
+4=HeadlineHandler.endElement
+7=PageMaker.startElement
+8=PageMaker.endElement
+2=HeadlineHandler
+5=HeadlineHandler.__init__
+3=PageMaker
+1=main
+-- END DICTIONARY
+-- START TREE 1
+9
+!<m|0|
+cha|0|
+dis|0|
+end|0|
+hea|1|HeadlineHandler!9@
+mai|1|main!10@
+pag|1|PageMaker!9@
+tes|1|TestHandler!9@
+web|0|
+-- END TREE
+-- START TREE 2
+17
+!<m|0|
+__i|1|__init__!2&10@
+cha|2|characters!3&10@characters!2&10@
+dat|2|data!4&11@data!5&11@
+def|0|
+dir|0|
+dis|0|
+e|0|
+end|2|endElement!3&10@endElement!2&10@
+ens|0|
+hea|1|headlines!5&11@
+in_|3|in_headline!4&11@in_headline!6&11@in_headline!2&11@
+out|1|out!7&11@
+pas|3|passthrough!8&11@passthrough!7&11@passthrough!3&11@
+sa|0|
+sta|3|startElement!3&10@startElement!2&10@startElement!9&10@
+wri|0|
+-- END TREE

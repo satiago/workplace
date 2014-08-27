@@ -1,7 +1,0 @@
-import wx
-
-class MyApp(wx.App):
-    def OnInit(self):
-        frame = wx.Frame(parent=None, id=-1,title="Bare")
-        frame.Show()
-        return True

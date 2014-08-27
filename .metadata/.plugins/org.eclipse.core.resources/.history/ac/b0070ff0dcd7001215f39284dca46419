@@ -1,9 +1,0 @@
-'''
-Created on Jun 17, 2013
-
-@author: satiago
-'''
-
-if __name__ == '__main__':
-    print("main function")
-    

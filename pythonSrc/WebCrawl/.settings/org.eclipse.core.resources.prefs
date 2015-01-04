@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//news/crawl/__init__.py=utf-8
+encoding//news/crawl/crawl_163.py=utf-8
+encoding//news/crawl/crawl_data.py=utf-8
+encoding//news/crawl/crawl_dispatch.py=utf-8
+encoding//news/crawl/crawl_main.py=utf-8
+encoding//news/crawl/crawl_sina.py=utf-8
+encoding//news/crawl/crawl_static.py=utf-8
+encoding//news/crawl/crawl_tencent.py=utf-8
+encoding//src/crawl_01.py=utf-8
+encoding//src/crawl_byr.py=utf-8
+encoding//src/crawl_byr2.py=utf-8
+encoding//src/crawl_qiubai.py=utf-8

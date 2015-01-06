@@ -4,6 +4,24 @@
 # $[]运算式
 # $()命令表达式
 
+# 数组
+array=(1 2 3 4 5)
+# 取元素值${array[i]}
+for item in ${array[@]}  #array[*] 全部元素
+do
+	echo "$item"
+done
+
+# 清空数组
+unset array
+
+#数组长度
+echo "array-len is ${#array[*]}"
+
+array1=(beijing shanghai [5]=chongqing tianjin)
+echo "${array1[*]/in/year}" #替换第一次遇到的子串
+echo "${array1[*]//in/happy}"  #替换所有子串
+
 # 输出脚本执行的所有参数
 echo $@;
 
@@ -21,6 +39,11 @@ echo "the substring is ${stringl:5:5}"
 stringsub="201455555678"
 echo "the short sub is ${stringsub#2*5}"
 echo "the longsub is ${stringsub##2*5}"
+
+# 替换子串
+restring="this is a is is is"
+echo "replace the first-${restring/is/new}"
+echo "replace all-${restring//is/old}"
 
 #for循环
 for var in 1 2 3 4 5

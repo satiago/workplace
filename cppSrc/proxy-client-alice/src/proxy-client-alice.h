@@ -10,4 +10,9 @@
 
 #include <pthread.h>
 
-
+typedef struct _data_head
+{
+	int sid; //发送方ID
+	int rid; //接收方ID
+	int length; //发送的数据长度
+}DATA_HEAD;

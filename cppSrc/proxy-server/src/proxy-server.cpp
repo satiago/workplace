@@ -7,12 +7,23 @@
 
 //记录当前分配ID的数量
 static int id_count = 0;
+//记录当前分配的ID-SOCK对
+static ID_SOCK id_sock[100] = 0;
 
+//子线程，处理服务器端的数据接收
+void* thread_transfer(void* arg)
+{
+
+	return ((void*) 1);
+}
+
+//子线程，处理服务器端的数据接收
 void* thread_worker(void* arg)
 {
 	char buffer[1024];
 	char data[1024];
 	int workerfd;
+	int transferfd;
 	DATA_HEAD data_head;
 	
 	workerfd = *((int *)arg);
@@ -26,13 +37,19 @@ void* thread_worker(void* arg)
 	data_head.sid = 0;
 	data_head.rid = id_count + 1;
 	
+	//记录ID-SOCK对
+	id_sock[data_head.rid].id = data_head.rid;
+	id_sock[data_head.rid].sock = workerfd;
+
 	//发送欢迎信息,信息中包含给当前客户端分配的ID
 	snprintf(data, 1024, WELCOME, data_head.rid);
-	
-	data_head.length = 0;
-	
-	memcpy(buffer, WELCOME, strlen(WELCOME));
-	if( send(workerfd, buffer, strlen(WELCOME), 0) == -1 )
+	data_head.length = strlen(data);
+
+	//构造数据包
+	memcpy(buffer, &data_head, sizeof(data_head));
+	memcpy(buffer + sizeof(data_head), data, strlen(data));
+
+	if( send(workerfd, buffer, strlen(buffer), 0) == -1 )
 	{
 		printf("send welcome failed!\n");
 		close(workerfd);
@@ -49,7 +66,19 @@ void* thread_worker(void* arg)
 			pthread_exit((void*)0);
 		}
 		
-		printf("recv data:%s\n", buffer);
+		//解析包头，判断数据包的转发地址并进行转发
+		//转发时启动线程处理(暂无)
+		memcpy(&data_head, buffer, sizeof(data_head));
+		transferfd = id_sock[data_head.rid].sock;
+
+		if( send(transferfd, buffer, strlen(buffer), 0) == -1 )
+		{
+			printf("transfer data failed!\n");
+			close(transferfd);
+			pthread_exit((void*)0);
+		}
+
+		printf("transfer data:%s, transfer ID:%d\n", buffer + sizeof(data_head), data_head.rid);
 	}
 	
 	return ((void*) 1);
@@ -62,7 +91,6 @@ int main(int argc, char **argv)
 	struct sockaddr_in servaddr;
 	struct sockaddr accept_addr;
 	socklen_t accept_addr_len;
-	
 	
 	if(argc != 2)
 	{

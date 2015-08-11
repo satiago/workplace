@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "BreakTickets",
+  "short_name": "BT",
+  "description": "chrome ex for tickets",
+  "version": "0.1",
+  "minimum_chrome_version": "38",
+  
+    "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+  
+  "browser_action":{
+    "default_icon": "assets/icon_16.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions":[
+     "http://*.12306.cn/*",
+     "https://*.12306.cn/*"
+  ]
+}

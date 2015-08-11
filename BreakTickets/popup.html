@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	  <head>
+	    <title>BreakTickets</title>
+	    <style>
+	      body {
+	        min-width: 100px;
+	        min-height: 100px;
+	      }
+	      
+	      div {
+	        width: 96px;
+	        height: 40px;
+	        margin-top: 50px;
+	        text-align: center;
+	        border-radius: 5px;
+	      }
+	      
+	      button {
+	        font-size: 20px;
+	        color: white;
+	        background-color : #FF8000;
+	        margin-top: 10px;
+	        display: inline-block;
+	        /*text-decoration: none;*/
+	      }
+	    </style>
+	
+	    <!--
+	      - JavaScript and HTML must be in separate files: see our Content Security
+	      - Policy documentation[1] for details and explanation.
+	      -
+	      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+	     -->
+	    <script src="popup.js"></script>
+	  </head>
+	  <body>
+	    <div>
+	      <!--chrome不允许执行js代码-->
+	      <button id="query">开始</button>
+	    </div>
+	  </body>
+	</html>
